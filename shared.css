@@ -18,6 +18,9 @@ e {
 r {
   color: #f00;
 }
+blue {
+  color: #00f;
+}
 
 #terminal {
   width: calc(100% - 20px);
@@ -90,8 +93,9 @@ r {
 	float: right;
 	right: 0.5%;
 	bottom: 2%;
-	border: 5px solid green;
 	border-radius: 50%;
+	height: 60px;
+	width: 60px;
 }
 #enter{
 	border: none;
@@ -110,5 +114,12 @@ r {
     position:absolute;
     bottom:0;
     right:0;
-    background:#000;
+    background: transparent;
+}
+#log{
+	padding: 5px;
+	background: #00ff7f;
+	color: black;
+	font: 16px Courier;
+	font-weight: bold;
 }

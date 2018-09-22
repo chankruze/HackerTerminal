@@ -27,7 +27,7 @@ catch(e) {
 
 
 var noteTextarea = $('#termput');
-var instructions = $('#recording-instructions');
+var instructions = $('#log');
 var notesList = $('ul#notes');
 
 var noteContent = '';

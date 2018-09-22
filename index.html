@@ -13,18 +13,22 @@
   </head>
   
 <img src="assets/common/images/info.png" id="paint">
+<div align="center" id="log">Press the <strong><blue>Speaker Icon</blue></strong> button and allow access to use voice recognition</div>
+
 <body>
 	
     <div id="terminal">enter <e>"help"</e> or <e>"-h"</e> to see all commands</div>
   <div id="output" align="center"></div>
   
+		
+  
 		<div id="bar">
 			<p id="bar-p"><r>geekofia@user</r>:~$</p>
             <input id="termput" type="text" name="command" autocomplete="off" oninput="autorun()" placeholder="Type commands here...">
-			<img id="start-record-btn" title="Start Recording" alt="Start" src="assets/common/images/content/mic.gif">
+			<img id="start-record-btn" title="Start Commanding" alt="Start" src="assets/common/images/content/mic.png">
 		</div>
 
-		<button id="enter" onclick="VoiceRun()"><img id="enter-img" src="assets/common/images/tick.png"></button>
+		<button id="enter" title="Enter this command" onclick="VoiceRun()"><img id="enter-img" src="assets/common/images/tick.png"></button>
 
 		<script src="shared.js"></script>
 
