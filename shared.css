@@ -21,6 +21,9 @@ r {
 blue {
   color: #00f;
 }
+bc{
+	color: #000;
+}
 
 #terminal {
   width: calc(100% - 20px);
@@ -116,10 +119,11 @@ blue {
     right:0;
     background: transparent;
 }
+
 #log{
 	padding: 5px;
-	background: #00ff7f;
-	color: black;
+	background: #282a36;
+	color: #fff;
 	font: 16px Courier;
-	font-weight: bold;
+
 }
