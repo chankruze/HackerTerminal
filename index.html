@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Hacker Terminal</title>
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="shared.css"/>
+		
+  </head>
+  
+<img src="assets/common/images/info.png" id="paint">
+<body>
+	
+    <div id="terminal">enter <e>"help"</e> or <e>"-h"</e> to see all commands</div>
+  <div id="output" align="center"></div>
+  
+		<div id="bar">
+			<p id="bar-p"><r>geekofia@user</r>:~$</p>
+            <input id="termput" type="text" name="command" autocomplete="off" oninput="autorun()" placeholder="Type commands here...">
+			<img id="start-record-btn" title="Start Recording" alt="Start" src="assets/common/images/content/mic.gif">
+		</div>
+
+		<button id="enter" onclick="VoiceRun()"><img id="enter-img" src="assets/common/images/tick.png"></button>
+
+		<script src="shared.js"></script>
+
+    
+</body>
+</html>
