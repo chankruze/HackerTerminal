@@ -122,8 +122,19 @@ bc{
 
 #log{
 	padding: 5px;
-	background: #282a36;
+	background: #f58f2a;
 	color: #fff;
 	font: 16px Courier;
 
+}
+
+.badge {
+	background-color: #f58f2a;
+	border-radius: 3px;
+	color: #fff;
+	margin-left: 4px;
+	margin-right: 4px;
+	padding: 3px;
+	font-weight:bold;
+	text-transform: uppercase;
 }

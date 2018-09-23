@@ -29,13 +29,8 @@ catch(e) {
 var noteTextarea = $('#termput');
 var instructions = $('#log');
 var notesList = $('ul#notes');
-
+var mic = document.getElementById('start-record-btn');
 var noteContent = '';
-
-// Get all notes from previous sessions and display them.
-var notes = getAllNotes();
-renderNotes(notes);
-
 
 
 /*-----------------------------
@@ -69,22 +64,23 @@ recognition.onresult = function(event) {
   }
 };
 
-recognition.onstart = function() { 
+recognition.onstart = function() {
+  recognizing = true;
   instructions.text('Voice recognition activated. Try speaking into the microphone.');
-  	$('#start-record-btn').src = 'assets/common/images/content/mic-animate.gif';
+  mic.src = 'assets/images/mic-animate.gif';
 }
 
 recognition.onspeechend = function() {
   instructions.text('You were quiet for a while so voice recognition turned itself off.');
+  mic.src = 'assets/images/mic-slash.png'
 }
 
 recognition.onerror = function(event) {
   if(event.error == 'no-speech') {
-    instructions.text('No speech was detected. Try again.');  
+    instructions.text('No speech was detected. Try again.');
+	mic.src = 'assets/images/mic.png';
   };
 }
-
-
 
 /*-----------------------------
       App buttons and input 
@@ -175,21 +171,7 @@ function saveNote(dateTime, content) {
 }
 
 
-function getAllNotes() {
-  var notes = [];
-  var key;
-  for (var i = 0; i < localStorage.length; i++) {
-    key = localStorage.key(i);
 
-    if(key.substring(0,5) == 'note-') {
-      notes.push({
-        date: key.replace('note-',''),
-        content: localStorage.getItem(localStorage.key(i))
-      });
-    } 
-  }
-  return notes;
-}
 
 
 function deleteNote(dateTime) {
@@ -882,6 +864,7 @@ function pdnsutil(){
 			'<iframe src="gifs/pdnsutil.gif" scrolling="no" frameborder="0" width="100%" height="100%" ></iframe>'+
 			'<br>';
 }
+
 function hack() {
 
   hackText = 'I_n_i_t_i_a_l_i_z_i_n_g_._._._<br>'+
