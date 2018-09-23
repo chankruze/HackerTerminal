@@ -196,10 +196,6 @@ function VoiceRun(){
         else if (a == 'dev') {
 			dev_info();
         }
-        // If Command Is Info
-        else if (a == 'info') {
-			terminal_info();
-        }
         // If Command Is nucler_code
         else if (a == 'nucler code') {
 			nuclear_code();
@@ -280,7 +276,7 @@ function VoiceRun(){
 			stage_99();
 		}
 		//If Command Is msfconsole
-		else if (a == 'msfconsole') {
+		else if (a == 'msf console') {
 			msfconsole();
 		}
 		//If Command Is pdnsutil
@@ -309,7 +305,6 @@ function voice_commands(){
 				'<e>"dev"</e> : see code info<br>'+
                 '<e>"nucler code"</e> : connect : NSA & steal nuclear code<br>'+
                 '<e>"matrix"</e> : show matrix display<br>'+
-                '<e>"info"</e> : see Hacker Terminal info<br>'+
                 '<e>"show date"</e> : show current time<br>'+
 				'<e>"recursion"</e> : run recursion<br>'+
 				'<e>"random ip"</e> : randomize your IP<br>'+
