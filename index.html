@@ -1,38 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Hacker Terminal v2.0</title>
-	
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="css/shared.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Hacker Terminal v3.0</title>
 
-  </head>
-  
-<img src="assets/images/info.png" id="paint">
-<div align="center" id="log"><span class="badge">Press the <strong><bc>Speaker Icon</bc></strong>,allow <bc>access</bc> and say <bc>Hello</bc></span></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Annyang -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+	<link rel="stylesheet" href="css/shared.css" />
+
+	<style>
+	::-webkit-scrollbar {
+    	width: 0px;
+	}
+	</style>
+
+	<script>
+
+		alert('Grant Microphone Permission & Say "Hello"');
+
+		if (annyang) {
+			// Let's define a command.
+			var commands = {
+				'hello': function () { voice_commands() },
+				'developer': function () { dev_info() },
+				'nuclear hijack': function () { nuclear_code() },
+				'matrix': function () { matrix() },
+				'date': function () { date() },
+				'recursion': function () { recursion() },
+				'random ip': function () { randomize() },
+				'generate pass': function () { passGen() },
+				'hack server': function () { hack() },
+				'system warning': function () { cmos_warning() },
+				'error 403': function () { error403() },
+				'error 404': function () { error404() },
+				'screen info': function () { screen_info() },
+				'browser data': function () { props() },
+				'ping': function () { ping() },
+				'fix vsftd': function () { vsftd_ubuntu() },
+				'decrypt key': function () { decrypt_sha2() },
+				'live hack': function () { live_hack() },
+				'hack usa': function () { hack_usa() },
+				'terminal': function () { live_terminal() },
+				'exploit': function () { stage_99() },
+				'msf console': function () { msfconsole() },
+				'pdns utility': function () { pdnsutil() },
+				'who am i': function () { fuck_you() },
+				'reload': function () { location.reload(true) }
+			};
+
+			// Add our commands to annyang
+			annyang.addCommands(commands);
+
+			// Start listening.
+			annyang.start();
+		}
+	</script>
+
+</head>
 
 <body>
-	
-    <div id="terminal">enter <e>"help"</e> or <e>"-h"</e> or say <e>hello</e> to list supported commands</div>
+
+	<div id="terminal">enter <e>"help"</e> or <e>"-h"</e> or say <e>hello</e> to list supported commands</div>
 	<div id="output" align="center"></div>
-  
-		
-  
-		<div id="bar">
-			<p id="bar-p"><r>geekofia@user</r>:~$</p>
-            <input id="termput" type="text" name="command" autocomplete="off" oninput="autorun()" placeholder="Type commands here...">
-			<img id="start-record-btn" title="Start Commanding" alt="Start Commanding" src="assets/images/mic.png">
-		</div>
 
-		<button id="enter" title="Enter this command" onclick="VoiceRun()"><img id="enter-img" src="assets/images/tick.png"></button>
+	<div id="bar">
+		<p id="bar-p">
+			<r>geekofia@user</r>:~$
+		</p>
+		<input id="termput" type="text" name="command" autocomplete="off" oninput="autorun()" placeholder="Type commands here...">
+	</div>
 
-		
-		<script src="js/shared.js"></script>
+	<script src="js/shared.js"></script>
 
-    
 </body>
+
 </html>
